@@ -1,0 +1,134 @@
+{% load static %}
+
+<!-- About -->
+<div class="container-fluid about bg-light py-2">
+  <div class="container py-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+        <div class="about-img">
+          <img
+            src="{% static 'img/about-5.jpg' %}"
+            class="img-fluid w-100 rounded-top bg-white"
+            alt="Image"
+          />
+          <img
+            src="{% static 'img/about-6.jpg' %}"
+            class="img-fluid w-100 rounded-bottom"
+            alt="Image"
+          />
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+        <h4 class="text-primary">Quiénes Somos</h4>
+        <h1 class="display-5 mb-4">
+          Agencia Tributaria y Financiera(ATF): Trabajando para todos.
+        </h1>
+        <p class="text ps-4 mb-4">
+          En ATF, nuestro compromiso es garantizar una recaudación eficiente y
+          transparente que impulse el desarrollo del país. Trabajamos de manera
+          ética y profesional para facilitar el cumplimiento de las obligaciones
+          tributarias, ofreciendo apoyo y soluciones a ciudadanos y empresas.
+        </p>
+        <div class="row g-4 justify-content-between mb-4">
+          <div class="col-lg-6 col-xl-5">
+            <p class="text-dark">
+              <i class="fas fa-check-circle text-primary me-1"></i> Orientación
+              Tributaria
+            </p>
+            <p class="text-dark mb-0">
+              <i class="fas fa-check-circle text-primary me-1"></i> Gestión de
+              Declaraciones
+            </p>
+          </div>
+          <div class="col-lg-6 col-xl-7">
+            <p class="text-dark">
+              <i class="fas fa-check-circle text-primary me-1"></i>
+              Fiscalización y Control
+            </p>
+            <p class="text-dark mb-0">
+              <i class="fas fa-check-circle text-primary me-1"></i> Soluciones
+              Empresariales
+            </p>
+          </div>
+        </div>
+        <div class="row g-4 justify-content-between mb-4">
+          <div class="col-xl-5">
+            <a href="{% url 'about' %}" class="btn btn-primary rounded-pill py-3 px-5"
+              >Conozca más</a
+            >
+          </div>
+        </div>
+        <div
+          class="row g-4 text-center align-items-center justify-content-center"
+        >
+          <div class="col-sm-4">
+            <div class="bg-primary rounded p-4">
+              <div class="d-flex align-items-center justify-content-center">
+                <span
+                  class="counter-value fs-1 fw-bold text-dark"
+                  data-toggle="counter-up"
+                  >1.2</span
+                >
+                <h4
+                  class="text-dark fs-1 mb-0"
+                  style="font-weight: 600; font-size: 25px"
+                >
+                  M+
+                </h4>
+              </div>
+              <div
+                class="w-100 d-flex align-items-center justify-content-center"
+              >
+                <p class="text-white mb-0">Contribuyentes Activos</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="bg-dark rounded p-4">
+              <div class="d-flex align-items-center justify-content-center">
+                <span
+                  class="counter-value fs-1 fw-bold text-white"
+                  data-toggle="counter-up"
+                  >15</span
+                >
+                <h4
+                  class="text-white fs-1 mb-0"
+                  style="font-weight: 600; font-size: 25px"
+                >
+                  +
+                </h4>
+              </div>
+              <div
+                class="w-100 d-flex align-items-center justify-content-center"
+              >
+                <p class="mb-0 text-white">Años de Servicio</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="bg-primary rounded p-4">
+              <div class="d-flex align-items-center justify-content-center">
+                <span
+                  class="counter-value fs-1 fw-bold text-dark"
+                  data-toggle="counter-up"
+                  >500</span
+                >
+                <h4
+                  class="text-dark fs-1 mb-0"
+                  style="font-weight: 600; font-size: 25px"
+                >
+                  +
+                </h4>
+              </div>
+              <div
+                class="w-100 d-flex align-items-center justify-content-center"
+              >
+                <p class="text-white mb-0">Oficinas en el País</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

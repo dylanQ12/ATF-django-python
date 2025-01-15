@@ -1,0 +1,27 @@
+.footer .btn-primary {
+    background-color: #0B2945; /* Color azul marino oscuro para el botón de enviar */
+    color: #FFFFFF; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 30px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave de color */
+}
+
+.footer .btn-primary:hover {
+    background-color: #092033; /* Cambio de color en hover */
+}
+
+.footer .btn-light {
+    background-color: #0B2945; /* Color azul marino oscuro para el botón de "Ver Todas" */
+    color: #FFFFFF; /* Texto blanco */
+    border-radius: 30px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave de color */
+}
+
+.footer .btn-light:hover {
+    background-color: #092033; /* Cambio de color en hover */
+}
+

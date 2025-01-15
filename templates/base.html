@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- Head Start -->
+      {% include "includes/header.html" %}
+    <!-- Head End -->
+
+    <body>
+        <!-- Spinner Start -->
+          {% include "components/spinner.html" %}
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+          <!--{% include "components/topbar.html" %} -->
+        <!-- Topbar End -->
+
+        <!-- Navbar Start -->
+          {% include "components/navbar.html" %}
+        <!-- Navbar End -->
+
+        <!-- CONTENT SECTIONS START -->
+         {% block content %} {% endblock %}
+        
+         <!-- Carousel Start -->
+          {% block carousel %}{% endblock %}
+        <!-- Carousel End -->
+
+        <!-- Hero Start -->
+        {% block hero %}{% endblock %}
+        <!-- Hero End -->
+
+        <!-- About Start -->
+          {% block about_section %}{% endblock %}
+        <!-- About End -->
+
+        <!-- Services Start -->
+          {% block service_section %}{% endblock %}
+        <!-- Services End -->
+
+        <!-- Blog Start -->
+          {% block blog_section %}{% endblock %}
+        <!-- Blog End -->
+
+        <!-- Team Start -->
+          {% block team_section %}{% endblock %}
+        <!-- Team End -->
+
+        <!-- Testimonial Start -->
+          {% block testimonial_section %}{% endblock %}
+        <!-- Testimonial End -->
+
+        <!-- Contact Start -->
+          {% block contact %} {% endblock %}
+        <!-- Contact End -->
+        <!-- CONTENT SECTIONS END -->
+
+        <!-- Footer Start -->
+          {% include "includes/footer.html" %}
+        <!-- Footer End --> 
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>  
+        
+    <!-- Scripts JS -->
+    {% include "includes/scripts.html" %}
+    </body>
+</html>

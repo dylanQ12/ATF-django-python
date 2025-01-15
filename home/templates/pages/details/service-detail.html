@@ -1,0 +1,59 @@
+{% extends "base.html" %} {% load static %}
+
+{% block content %}
+   <!-- Hero -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="bg-breadcrumb-single"></div>
+    <div class="container text-center py-5" style="max-width: 900px">
+      <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
+        {{ service.name }}
+      </h4>
+      <ol
+        class="breadcrumb justify-content-center mb-0 wow fadeInDown"
+        data-wow-delay="0.3s"
+      >
+      <li class="breadcrumb-item"><a href="{% url 'home' %}">Inicio</a></li>
+      <li class="breadcrumb-item active text-primary">{{ service.date_created|date:"d M, Y" }}</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Details -->
+<div class="container-fluid about bg-light py-2">
+    <div class="container py-5">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+          <div class="about-img">
+            <img
+              src="{% static 'img/about-14.jpg' %}"
+              class="img-fluid w-100 rounded-top bg-white"
+              alt="Image"
+            />
+            <img
+              src="{{ service.image.url }}"
+              class="img-fluid w-100 rounded-bottom"
+              alt="Image"
+            />
+          </div>
+        </div>
+        <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+          <h4 class="text-primary">Servicio</h4>
+          <h1 class="display-5 mb-4">
+            {{ service.name }}
+          </h1>
+          <p class="text ps-4 mb-4">
+            {{ service.description }}
+          </p>
+          <div class="row g-4 justify-content-between mb-4">
+            <div class="col-lg-6 col-xl-5">
+              <p class="text-dark mb-0">
+                <strong>Fecha de Publicación:</strong> {{ service.date_created|date:"d M, Y" }}
+              </p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

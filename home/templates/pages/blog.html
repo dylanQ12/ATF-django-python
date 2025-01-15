@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% load static %}
+
+<!-- Component Hero -->
+{% block hero %} 
+  {% include "components/hero.html" %}
+{% endblock %}
+
+<!-- All Posts of Blog -->
+{% block blog_section %}
+  <!-- Blog -->
+<div class="container-fluid blog py-5">
+  <div class="container pb-5">
+      <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+          <h4 class="text-primary">Nuestro Blog</h4>
+          <h1 class="display-4">Últimos Artículos & Noticias</h1>
+      </div>
+      <div class="row g-4 justify-content-center">
+          {% for post in posts %}
+          <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.{{ forloop.counter|add:1 }}s">
+              <div class="blog-item bg-light rounded p-4" style="background-image: url( {% static 'img/bg.png' %} );">
+                  <div class="mb-4">
+                      <h4 class="text-primary mb-2">{{ post.title|truncatewords:3|capfirst }}</h4>
+                      <div class="d-flex justify-content-between">
+                          <p class="mb-0"><span class="text-dark fw-bold">El</span> {{ post.date_created|date:"d M, Y" }}</p>
+                          <p class="mb-0"><span class="text-dark fw-bold">Por</span> {{ post.author.first_name }} {{ post.author.last_name }}</p>
+                      </div>
+                  </div>
+                  <div class="project-img">
+                      <img src="{{ post.image.url }}" class="img-fluid w-100 rounded" alt="{{ post.title }}">
+                      <div class="blog-plus-icon">
+                          <a href="{{ post.image.url }}" data-lightbox="blog-{{ forloop.counter }}" class="btn btn-primary btn-md-square rounded-pill"><i class="fas fa-plus fa-1x"></i></a>
+                      </div>
+                  </div>
+                  <div class="my-4">
+                      <a href="{% url 'detail-blog' post.uuid %}" class="h4">{{ post.description|truncatewords:7 }}</a>
+                  </div>
+                  <a class="btn btn-primary rounded-pill py-2 px-4" href="{% url 'detail-blog' post.uuid %}">Leer más</a>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+</div>
+{% endblock %}

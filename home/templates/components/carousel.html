@@ -1,0 +1,53 @@
+{% load static %}
+
+<div class="header-carousel owl-carousel">
+  {% for item in latest_carrusel %}
+  <div class="header-carousel-item">
+    <div class="header-carousel-item-img">
+      <img
+        src="{{ item.image.url }}"
+        class="img-fluid w-100"
+        alt="Imagen de {{ item.title }}"
+      />
+    </div>
+    <div class="carousel-caption">
+      <div class="carousel-caption-inner text-start p-3">
+        <h1
+          class="display-1 text-capitalize text-white mb-4 fadeInUp animate__animated"
+          data-animation="fadeInUp"
+          data-delay="1.3s"
+          style="animation-delay: 1.3s"
+        >
+          {{ item.title }}
+        </h1>
+        <p
+          class="mb-5 fs-5 fadeInUp animate__animated"
+          data-animation="fadeInUp"
+          data-delay="1.5s"
+          style="animation-delay: 1.5s"
+        >
+          {{ item.description }}
+        </p>
+        <a
+          class="btn btn-primary rounded-pill py-3 px-5 mb-4 me-4 fadeInUp animate__animated"
+          data-animation="fadeInUp"
+          data-delay="1.7s"
+          style="animation-delay: 1.7s"
+          href="{% url 'about' %}"
+        >
+          Más Información
+        </a>
+        <a
+          class="btn btn-dark rounded-pill py-3 px-5 mb-4 fadeInUp animate__animated"
+          data-animation="fadeInUp"
+          data-delay="1.7s"
+          style="animation-delay: 1.7s"
+          href="{% url 'contact' %}"
+        >
+          Contáctanos
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,69 @@
+{% extends "base.html" %} {% load static %}
+
+<!-- Component Hero -->
+{% block hero %} 
+    {% include "components/hero.html" %}
+{% endblock %}
+
+<!-- Component About Section -->
+{% block about_section %}
+  <!-- About -->
+<div class="container-fluid about bg-light py-2">
+  <div class="container py-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 col-xl-5 wow fadeInLeft" data-wow-delay="0.1s">
+        <div class="about-img">
+          <img
+            src="{% static 'img/about-12.jpg' %}"
+            class="img-fluid w-100 rounded-top bg-white"
+            alt="Image"
+          />
+          <img
+            src="{% static 'img/about-13.jpg' %}"
+            class="img-fluid w-100 rounded-bottom"
+            alt="Image"
+          />
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-7 wow fadeInRight" data-wow-delay="0.3s">
+        <h4 class="text-primary">Sobre Nosotros</h4>
+        <h1 class="display-5 mb-4">
+          Agencia Tributaria y Financiera(ATF): Misión y Visión.
+        </h1>
+        <p class="text ps-4 mb-4">
+          Atf busca ser el aliado estratégico líder en soluciones tributarias y financieras en Ecuador, reconocido por nuestra innovación, integridad y compromiso con el crecimiento sostenible de nuestros clientes. Queremos transformar la complejidad tributaria en una ventaja competitiva, empoderando a las empresas a prosperar en un entorno global dinámico.
+        </p>
+        <p class="text ps-4 mb-4">
+          Buscamos brindar asesoría tributaria de excelencia, utilizando tecnología avanzada y un enfoque personalizado para garantizar el cumplimiento normativo, optimizar recursos y fomentar el desarrollo económico de nuestros clientes. En ATF, trabajamos con pasión y transparencia, construyendo relaciones de confianza que impulsen el éxito financiero de las empresas y el bienestar de las comunidades.
+        </p>
+        <div class="row g-4 justify-content-between mb-4">
+          <div class="col-lg-6 col-xl-5">
+            <p class="text-dark">
+              <i class="fas fa-check-circle text-primary me-1"></i> Auditorías Tributarias
+            </p>
+            <p class="text-dark mb-0">
+              <i class="fas fa-check-circle text-primary me-1"></i>  Análisis de Riesgos
+              Financieros
+            </p>
+          </div>
+          <div class="col-lg-6 col-xl-7">
+            <p class="text-dark">
+              <i class="fas fa-check-circle text-primary me-1"></i>
+              Capacitación en Normas Tributarias
+            </p>
+            <p class="text-dark mb-0">
+              <i class="fas fa-check-circle text-primary me-1"></i> Representación Legal
+              en Asuntos Tributarios
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<!-- Component Team Section -->
+{% block team_section %}
+  {% include "components/team-section.html" %}
+{% endblock %}

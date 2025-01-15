@@ -1,0 +1,43 @@
+{% block navbar %}
+<div class="container-fluid sticky-top px-0">
+    <div class="position-absolute bg-white" style="left: 0; top: 0; width: 100%; height: 100%;">
+    </div>
+    <div class="container px-0">
+        <nav class="navbar navbar-expand-lg navbar-dark py-3 px-4">
+            <a href="{% url 'home' %}" class="navbar-brand p-0">
+                <h1 class="text-primary m-0">ATF</h1>
+                <!-- <img src="img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="{% url 'home' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                        Inicio
+                    </a>
+                    <a href="{% url 'about' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                        Nosotros
+                    </a>
+                    <a href="{% url 'services-section' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'services-section' %}active{% endif %}">
+                        Servicios
+                    </a>
+                    <a href="{% url 'blog' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'blog' %}active{% endif %}">
+                        Blog
+                    </a>
+                    <a href="{% url 'team' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'team' %}active{% endif %}">
+                        Nuestro Equipo
+                    </a>
+                    <a href="{% url 'contact' %}" class="nav-item nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                        Contáctanos
+                    </a>
+                </div>
+                <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                    <!--<button class="btn btn-primary btn-md-square mx-2" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button> -->
+                    <a href="{% url 'home' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-2 flex-wrap flex-sm-shrink-0">Iniciar Sesión</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+{% endblock %}

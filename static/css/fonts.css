@@ -1,0 +1,30 @@
+/* Importa las fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.btn-primary {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+/* Estilos del Navbar con fuente Poppins */
+.navbar, .navbar a, .navbar-brand, .nav-item, .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Puedes ajustar a 500 o 700 si prefieres un estilo más grueso */
+}
+
+/* Estilos para citas o testimonios con Lora o Merriweather */
+blockquote, .testimonial-item p {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-style: italic;
+}
