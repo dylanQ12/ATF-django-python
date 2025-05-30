@@ -14,7 +14,7 @@
       data-wow-delay="0.3s"
     >
     <li class="breadcrumb-item"><a href="{% url 'home' %}">Inicio</a></li>
-    <li class="breadcrumb-item active text-primary">{{ post.date_created|date:"d M, Y"  }}</li>
+    <li class="breadcrumb-item active text-primary">{{ post.date_modified|date:"d M, Y" }}</li>
     </ol>
   </div>
 </div>
@@ -48,10 +48,10 @@
         <div class="row g-4 justify-content-between mb-4">
           <div class="col-lg-6 col-xl-5">
             <p class="text-dark">
-              <strong>Autor:</strong> {{ post.author }}
+              <!--<strong>Autor:</strong> {{ post.author }} -->
             </p>
             <p class="text-dark mb-0">
-              <strong>Fecha de Publicación:</strong> {{ post.date_created|date:"d M, Y" }}
+              {{ post.date_modified|date:"d M, Y" }}
             </p>
           </div>
         </div>

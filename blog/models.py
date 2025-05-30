@@ -12,6 +12,7 @@ class Post(models.Model):
     title = models.CharField(max_length=150)
     description = models.TextField(blank=True, null=True)
     date_created = models.DateTimeField(auto_now_add=True)
+    date_modified = models.DateTimeField(auto_now=True, null=True)
     author = models.ForeignKey(
         CustomUser,
         on_delete=models.CASCADE,

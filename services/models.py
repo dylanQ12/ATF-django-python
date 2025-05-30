@@ -12,6 +12,7 @@ class Service(models.Model):
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
+    date_modified = models.DateTimeField(auto_now=True, null=True)
 
     def save(self, *args, **kwargs):
         # Verifica si el objeto ya existe antes de intentar acceder a él

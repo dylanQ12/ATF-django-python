@@ -13,7 +13,7 @@
         data-wow-delay="0.3s"
       >
       <li class="breadcrumb-item"><a href="{% url 'home' %}">Inicio</a></li>
-      <li class="breadcrumb-item active text-primary">{{ service.date_created|date:"d M, Y" }}</li>
+      <li class="breadcrumb-item active text-primary">{{ service.date_modified|date:"d M, Y" }}</li>
       </ol>
     </div>
   </div>
@@ -47,7 +47,7 @@
           <div class="row g-4 justify-content-between mb-4">
             <div class="col-lg-6 col-xl-5">
               <p class="text-dark mb-0">
-                <strong>Fecha de Publicación:</strong> {{ service.date_created|date:"d M, Y" }}
+                {{ service.date_modified|date:"d M, Y" }}
               </p>
             </div>
           </div>
